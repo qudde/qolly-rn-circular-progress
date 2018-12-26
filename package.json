@@ -1,0 +1,60 @@
+{
+  "_from": "git+https://github.com/bgryszko/react-native-circular-progress.git",
+  "_id": "react-native-circular-progress@0.1.2",
+  "_inBundle": false,
+  "_integrity": "sha1-3RTrqwlX7PUUabrkxdex2LPZrl4=",
+  "_location": "/react-native-circular-progress",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "react-native-circular-progress@git+https://github.com/bgryszko/react-native-circular-progress.git",
+    "name": "react-native-circular-progress",
+    "escapedName": "react-native-circular-progress",
+    "rawSpec": "git+https://github.com/bgryszko/react-native-circular-progress.git",
+    "saveSpec": "git+https://github.com/bgryszko/react-native-circular-progress.git",
+    "fetchSpec": "https://github.com/bgryszko/react-native-circular-progress.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/bgryszko/react-native-circular-progress.git#454048bd92a166b876d53ea227c6cff2cc43c41a",
+  "_spec": "react-native-circular-progress@git+https://github.com/bgryszko/react-native-circular-progress.git",
+  "_where": "/Users/maxbonden/Desktop/qolly-app-android/app",
+  "author": {
+    "name": "Bart Gryszko",
+    "email": "b@gryszko.com"
+  },
+  "bugs": {
+    "url": "https://github.com/bgryszko/react-native-circular-progress/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "art": "^0.10.1",
+    "prop-types": "^15.6.0"
+  },
+  "deprecated": false,
+  "description": "React Native component for creating animated, circular progress with ReactART",
+  "homepage": "https://github.com/bgryszko/react-native-circular-progress",
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "progress",
+    "chart",
+    "react-art",
+    "art"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-circular-progress",
+  "peerDependencies": {
+    "react": ">= 15 || ~16.0.0-0",
+    "react-native": ">=0.39"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bgryszko/react-native-circular-progress.git"
+  },
+  "version": "0.1.2"
+}
