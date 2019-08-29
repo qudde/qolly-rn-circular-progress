@@ -4,11 +4,11 @@ import MetricsPath from "art/metrics/path";
 import { View } from "react-native";
 import ART from "art";
 
-const { Surface, Shape, Path, Group } = ART;
+const { Surface, Shape, Group } = ART;
 
 export default class CircularProgress extends React.Component {
   circlePath(cx, cy, r, startDegree, endDegree) {
-    let p = Path();
+    let p = MetricsPath();
     p.path.push(0, cx + r, cy);
     p.path.push(
       4,
