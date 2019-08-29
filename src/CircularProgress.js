@@ -1,16 +1,21 @@
-
-import React from 'react';
-import PropTypes from 'prop-types';
-import { View, ViewPropTypes, Platform, ART } from 'react-native';
-const { Surface, Shape, Path, Group } = ART;
-import MetricsPath from 'art/metrics/path';
+import React from "react";
+import PropTypes from "prop-types";
+import MetricsPath from "art/metrics/path";
+import { Surface, Shape, Path, Group } from "@react-native-community/art";
 
 export default class CircularProgress extends React.Component {
-
   circlePath(cx, cy, r, startDegree, endDegree) {
     let p = Path();
     p.path.push(0, cx + r, cy);
-    p.path.push(4, cx, cy, r, startDegree * Math.PI / 180, endDegree * Math.PI / 180, 1);
+    p.path.push(
+      4,
+      cx,
+      cy,
+      r,
+      (startDegree * Math.PI) / 180,
+      (endDegree * Math.PI) / 180,
+      1
+    );
     return p;
   }
 
@@ -32,29 +37,38 @@ export default class CircularProgress extends React.Component {
     } = this.props;
 
     const fill = this.extractFill(this.props.fill);
-    const backgroundPath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, 360 * .9999);
-    const circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, (360 * .9999) * fill / 100);
-    const offset = size - (width * 2);
+    const backgroundPath = this.circlePath(
+      size / 2,
+      size / 2,
+      size / 2 - width / 2,
+      0,
+      360 * 0.9999
+    );
+    const circlePath = this.circlePath(
+      size / 2,
+      size / 2,
+      size / 2 - width / 2,
+      0,
+      (360 * 0.9999 * fill) / 100
+    );
+    const offset = size - width * 2;
 
     const childContainerStyle = {
-      position: 'absolute',
+      position: "absolute",
       left: width,
       top: width,
       width: offset,
       height: offset,
       borderRadius: offset / 2,
-      alignItems: 'center',
-      justifyContent: 'center'
-    }
+      alignItems: "center",
+      justifyContent: "center"
+    };
 
     return (
       <View style={style}>
-        <Surface
-          width={size}
-          height={size}
-        >
-          <Group rotation={rotation - 90} originX={size/2} originY={size/2}>
-            { backgroundColor !== 'transparent' && (
+        <Surface width={size} height={size}>
+          <Group rotation={rotation - 90} originX={size / 2} originY={size / 2}>
+            {backgroundColor !== "transparent" && (
               <Shape
                 d={backgroundPath}
                 stroke={backgroundColor}
@@ -69,13 +83,9 @@ export default class CircularProgress extends React.Component {
             />
           </Group>
         </Surface>
-        {children && (
-          <View style={childContainerStyle}>
-            {children(fill)}
-          </View>
-        )}
+        {children && <View style={childContainerStyle}>{children(fill)}</View>}
       </View>
-    )
+    );
   }
 }
 
@@ -90,11 +100,11 @@ CircularProgress.propTypes = {
   rotation: PropTypes.number,
   linecap: PropTypes.string,
   children: PropTypes.func
-}
+};
 
 CircularProgress.defaultProps = {
-  tintColor: 'black',
-  backgroundColor: '#e4e4e4',
+  tintColor: "black",
+  backgroundColor: "#e4e4e4",
   rotation: 90,
-  linecap: 'butt'
-}
+  linecap: "butt"
+};

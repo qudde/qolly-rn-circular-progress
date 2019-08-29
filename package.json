@@ -1,7 +1,7 @@
 {
   "bundleDependencies": false,
   "dependencies": {
-    "art": "^0.10.1",
+    "@react-native-community/art": "1.0.1",
     "prop-types": "^15.6.0"
   },
   "deprecated": false,
@@ -10,7 +10,8 @@
   "name": "qolly-rn-circular-progress",
   "peerDependencies": {
     "react": ">= 15 || ~16.0.0-0",
-    "react-native": ">=0.39"
+    "react-native": ">=0.39",
+    "art": "0.10.3"
   },
   "repository": {
     "type": "git",
