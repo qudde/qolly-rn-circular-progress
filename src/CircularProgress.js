@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import MetricsPath from "art/metrics/path";
 import { Surface, Shape, Path, Group } from "@react-native-community/art";
+import { View } from "react-native";
 
 export default class CircularProgress extends React.Component {
   circlePath(cx, cy, r, startDegree, endDegree) {
